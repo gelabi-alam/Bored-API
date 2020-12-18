@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>REST API - Representational State Transfer | Application Programming Interface <span style="color: red; margin-top: 8px;font-size: 30px;">❤</span></h1>
+    <hr style="width: 500px;">
+    <hr style="width: 300px;">
+    <p>Bored API: <a style="color: gray" href="https://www.boredapi.com/api/activity/">https://www.boredapi.com/api/activity</a></p>
+
+    <h2 id="activities">👌</h2>
+    <footer>
+        <p style="margin-top: 300px; font-size: 12px; border: none;">&copy; Gelabi Alam  <span style="color: red; margin-top: 8px;font-size: 10px;">❤</span></p>
+    </footer>
+
+    <script>
+
+        // //create an object
+        // const user = {
+        //     id: 1,
+        //     name: "Gelabi Alam",
+        //     age: 24,
+
+        //     //array in object
+        //     ageArrInObj: [23, 24, 25],
+
+        //     //Object in object
+        //     eduObjInObj: {
+        //         school: "BITE",
+        //         location: "Bogura, Rajshahi"
+        //     }
+        // }
+        // console.log(user);
+
+        // //convert object to JSON format
+
+        // const useJSON = JSON.stringify(user);
+        // console.log(useJSON);
+
+        // //at now JSON to object convert
+        // const objReverse = JSON.parse(useJSON);
+        // console.log(objReverse);
+
+        //data load to JSON placeholder (it's fake API)
+
+        fetch('https://www.boredapi.com/api/activity/')
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById("activities").innerText = data.activity;
+        })
+
+
+    </script>
+</body>
+</html>
